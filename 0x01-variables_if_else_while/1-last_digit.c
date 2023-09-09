@@ -5,7 +5,7 @@
 /**
  * main - This is the entry point
  *
- * return: Value of (0)
+ * Return: 0 if succesful
  */
 int main(void)
 {
