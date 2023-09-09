@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /* 
- * Main - This is the Entry point
- * Return - exit point
+ * main - This is the Entry point
+ *
+ * return: Value of (0)
  */
 int main(void)
 {
