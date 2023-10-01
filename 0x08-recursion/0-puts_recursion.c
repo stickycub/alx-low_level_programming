@@ -4,15 +4,14 @@
  * @s: input
  * Return: Always 0 (Success)
  */
-
 void _puts_recursion(char *s)
 {
-	while (*s)
+	if (*s)
 	{
 		_putchar(*s);
-		s++;
-		_puts_recursion(s);
-		return;
+		_puts_recursion(s + 1);
 	}
-	_putchar('\n');
+
+	else
+		_putchar('\n');
 }
