@@ -13,21 +13,17 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *current, *temp;
 	size_t count = 0;
 
-	if (h == NULL || *h == NULL)
-		return (count);
-
-	current = *h;
-	while (current != NULL)
+	while (*h)
 	{
 		count++;
-		temp = current;
-		current = current->next;
-		free(temp);
-
-		if (count > 98)
+		temp = *h;
+		if (temp <= temp->next)
 		{
+			*h = NULL;
 			exit(98);
 		}
+		*h = (*h)->next;
+		free(temp);
 	}
 
 	*h = NULL;
